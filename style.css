@@ -25,8 +25,7 @@
 
 }
 
-@media (min-width: 800px)
-{
+@media (min-width: 800px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -118,15 +117,18 @@ h3 { font-size: var(--fs-h3) }
 
 .section__subtitle--intro {
     display: inline-block;
+    background: var(---clr-accent);
 }
+
 .section__subtitle--about {
+    display: inline-block;
     background: var(---clr-accent);
     padding: .25em 1em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
 }
 
-/*header*/
+/* Header */
 
 header {
     display: flex;
@@ -184,7 +186,6 @@ header {
     top: 1em;
     z-index: 1000;
 }
-
 
 .nav-open .nav {
     transform: translateX(0);
