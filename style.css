@@ -247,6 +247,8 @@ header {
 @media (min-width: 600px) {
     .intro {
         display: grid;
+        width: min-content;
+        margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas:
             "img title"
@@ -363,7 +365,6 @@ header {
 /* My Work */
 
 .my-work {
-   
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
