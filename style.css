@@ -236,7 +236,7 @@ header {
 
 /* Intro section */
 
-.intro {
+.intro {padding-bottom: 60px;
     position: relative;
 }
 
@@ -310,7 +310,6 @@ header {
 @media (min-width: 800px) {
     .services {
         display: flex;
-        max-width: 100px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -322,6 +321,8 @@ header {
 
 
 .about-me {
+    padding-top: 50px;
+    padding-bottom: 50px;
     max-width: 1000px;
     margin: 0 auto;
 
@@ -343,13 +344,13 @@ header {
     }
 
     .section__title--about {
+        top: 50px;
         grid-area: title;
     }
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
-        left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
         padding-right: calc(200px + 4em);
@@ -362,46 +363,19 @@ header {
     }
 }
 
-/* My Work */
-
-.my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+.Contact-Info {
+    background: #303030;
+    color: var(---clr-accent);
     text-align: center;
+    font-size: 2.5em;
 }
 
-.section__subtitle--work {
-    color: var(--clr-acccent);
-    font-weight: var(--fw-bold);
-    margin-bottom: 2em;
+.contact-link {
+    color: white;
+    font-size: 35px;
 }
 
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
 
-.portfolio__item {
-    background: var(--clr-acccent);
-    overflow: hidden;
-}
-
-.portfolio__img {
-    transition: 
-        transform 750ms cubic-bezier(.5, 0, .5, 1),
-        opacity 250ms linear;
-}
-
-.portfolio__item:focus {
-    position: relative;
-    z-index: 2;
-}
-
-.portfolio__img.hover,
-.portfolio__item:focus .portfolio__img {
-    transform: scale(1.2);
-    opacity: .75;
-}
 
 /* Footer */
 
@@ -451,4 +425,3 @@ header {
     max-width: 1000px;
     margin: 0 auto;
 }
-
