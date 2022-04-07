@@ -205,10 +205,39 @@ header {
     opacity: 0;
 }
 
+.hamburger {   
+    display: block;
+    position: relative;
+
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    background: var(--clr-dark);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+    
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hamburger::before { top: 6px}
+.hamburger::after { bottom: 6px}
+
 
 /* Intro section */
 
-.intro {padding-bottom: 60px;
+.intro {
+    padding: 50px;
     position: relative;
 }
 
@@ -246,9 +275,16 @@ header {
     }
 }
 
-
     /* My services section */
 
+.my-services {
+    background-color: var(--clr-dark);
+    background-image: url(../Portfolio/Dubai_Nighttime.jpg);
+    background-size: cover;
+ /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: center;
+}
 
 .section__title--services {
     color: var(---clr-accent);
@@ -286,8 +322,6 @@ header {
 
 
 .about-me {
-    padding-top: 50px;
-    padding-bottom: 50px;
     max-width: 1000px;
     margin: 0 auto;
 
@@ -309,13 +343,13 @@ header {
     }
 
     .section__title--about {
-        top: 50px;
         grid-area: title;
     }
     .section__subtitle--about {
         grid-column: 1 / -1;
         grid-row: 2;
         position: relative;
+        left: -1em;
         width: calc(100% + 2em);
         padding-left: 1em;
         padding-right: calc(200px + 4em);
@@ -328,19 +362,46 @@ header {
     }
 }
 
-.Contact-Info {
-    background: #303030;
-    color: var(---clr-accent);
+/* My Work */
+
+.my-work {
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
     text-align: center;
-    font-size: 2.5em;
 }
 
-.contact-link {
-    color: white;
-    font-size: 35px;
+.section__subtitle--work {
+    color: var(--clr-acccent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
 }
 
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
+.portfolio__item {
+    background: var(--clr-acccent);
+    overflow: hidden;
+}
+
+.portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio__img.hover,
+.portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .75;
+}
 
 /* Footer */
 
@@ -389,4 +450,15 @@ header {
     padding: 0 2em 2em;
     max-width: 1000px;
     margin: 0 auto;
+}
+.Contact-Info {
+    background: #303030;
+    color: var(---clr-accent);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.contact-link {
+    color: white;
+    font-size: 35px;
 }
