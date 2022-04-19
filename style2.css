@@ -370,6 +370,14 @@ header {
     text-align: center;
 }
 
+.section__title--work {
+    text-align: center;
+    background-color: var(--clr-dark);
+    color: var(---clr-accent);
+    position: relative;
+    padding: 5px;
+}
+
 .section__subtitle--work {
     color: var(--clr-acccent);
     font-weight: var(--fw-bold);
@@ -382,6 +390,8 @@ header {
 }
 
 .portfolio__item {
+    padding-left: 10px;
+    width: 500px;
     background: var(--clr-acccent);
     overflow: hidden;
 }
